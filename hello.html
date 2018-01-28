@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+
+
+    <title>7Dev</title>
+  </head>
+  <body>
+
+    <header>
+    <!-- 
+      comentáriso sobre as classes da primeira tag NavBar
+      navbar-expand-lg = NavBar expandido
+      navbar-light = Cores com cinza escuro
+      bg-light = Background com cinza claro.
+      fixed-top = fixo no topo, msm com o site descendo.
+    -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-gradient-primary">
+       
+        <!-- Organizando o conteúdo do navbar dentro de um container para ficar igual ao site.-->
+        <div class="container">
+
+          <!-- 
+          navbar Brand = a parte que fica normalmente localizado no lado esquerdo principal mt utilizada pra logo.
+          h1 = tag para deixar a brand maior
+          mb-0 = margin bottom 0px;
+          -->
+          <a class="navbar-brand h1 mb-0" href="#">7Dev</a>
+          
+          <!-- 
+          navbar-toggle = tag para aplicar e indicar que será o botão de alternancia do navbar para versões mobiles 
+          Criação do botão com as tags de manipulação para as ul.
+          -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite"> 
+              <span class="navbar-toggler-icon"></span> 
+          </button>
+
+          <!-- Div responsável por exibir os conteúdos do nav bar
+            deve possuir um id de acordo com o data-target do toggle que será acionado pelo botão
+           -->
+          <div class="collapse navbar-collapse" id="navbarSite">
+            
+            <!-- Listagem dos itens da nav bar
+              mr e ml funciona para todos conteúdos do nav bar agora com padrão do bootstrap 4.
+              mr-auto = margin-right, coloca a div com um padrão da margin do lado direito. 
+            -->
+              <ul class="navbar-nav mr-auto">
+                <!-- Itens em si -->
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Inicio</a>
+                  </li>
+                   <li class="nav-item">
+                      <a class="nav-link" href="#">Serviços</a>
+                  </li>
+                   <li class="nav-item">
+                      <a class="nav-link" href="#">Equipe</a>
+                  </li>
+                   <li class="nav-item">
+                      <a class="nav-link" href="#">Contatos</a>
+                  </li>
+              </ul>
+
+              <!-- Listagem dos itens da nav bar
+              ml-auto = margin-left, coloca a div com um padrão da margin do lado esquerdo. 
+               -->
+              <ul class="navbar-nav ml-auto">
+                <!-- 
+                  Criando um item com dropdown
+                  é necessário todas essas classes para indicar que são filhos de um dropdown e serão exibidas ao passar o focus com o mouse.
+                -->
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">
+                          Social
+                      </a>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#"> Facebook</a>
+                          <a class="dropdown-item" href="#"> Twitter</a>
+                          <a class="dropdown-item" href="#"> Instagram</a>
+                      </div>
+
+                  </li>
+
+              </ul>
+              <!-- Criando um formulário no NAvBar-->
+              <form class="form-inline">
+                <input type="search" class="form-control ml-4 mr-2 mt-1 " placeholder="Buscar">
+                <button class="btn btn-dark " type="submit">Ok</button>
+              </form>
+          </div>
+
+      </div>
+    </nav>
+</header>
+
+<main>
+ 
+    <!--Criação do carousel, precisa indicar um id, e colocar as classes padrões  -->   
+    <div id="carouselSite" class="carousel slide" data-ride="carousel">
+      <!--Indicadores de quais fotos estamos no banner e que acompanha a manipulação  -->  
+      <ol class="carousel-indicators">
+        <li data-target="#carouselSite" data-slide-to="0" class="active"></li>      
+        <li data-target="#carouselSite" data-slide-to="1" ></li>  
+        <li data-target="#carouselSite" data-slide-to="2" ></li>  
+      </ol>
+
+      <!--Conteúdos dos carousel que será animado-->  
+      <div class="carousel-inner">
+
+        <!--Itens dos carousels precisam ser indicados com carousel-item e algum precisa iniciar como ativo -->  
+          <div class="carousel-item active">
+            <!-- img-fluid = para imagem ocupar todo espaço do recipiente que ela foi colocado
+              d-block = aparecê normais em todas resoluções de tela.-->
+            <img src="imgs/slide-01.jpg" class="img-fluid">
+
+            <!--Carousel-caption para colocar uma mensagem de texto
+              d-none serve para usar o display nome,  e o d-md-block para indicar que em pixeis menores esse conteúdo n deve ser exibido.
+              segue padrão paras três divs.
+              text-dark : cor preta.
+             -->
+            <div class="carousel-caption d-none d-md-block text-dark">
+              <h2> 7Dev</h2>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquam ut metus id pretium. Fusce odio orci.</p>
+            </div>
+           </div>
+         <div class="carousel-item">
+          
+            <img src="imgs/slide-02.jpg" class="img-fluid">
+            <div class="carousel-caption d-none d-md-block text-dark">
+                <h2>Lorem impsum</h2>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquam ut metus id pretium. Fusce odio orci.</p>
+            </div>
+          </div>
+         <div class="carousel-item">
+     
+            <img src="imgs/slide-03.jpg" class="img-fluid">
+            <div class="carousel-caption d-none d-md-block text-dark">
+                 <h2>Lorem impsum</h2>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquam ut metus id pretium. Fusce odio orci.</p>
+            </div>
+          </div>
+      </div>
+
+      <!-- Indicadores usados para manipular o carousel 
+        dois botões onde você pode clicar para passar e voltar os slides a manipulação é bem simples.
+      -->
+
+      <a class="carousel-control-prev" href="#carouselSite" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="sr-only"> Anterior</span>
+      </a>
+
+      <a class="carousel-control-next" href="#carouselSite" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="sr-only"> Próximo</span>
+      </a>
+    </div>
+
+  <div class="container">
+    <!-- row: serve para indicar que é a div será uma coluna  -->
+      <div class="row">
+        <!--col-12 : indicar que essa coluna irá ocupar toda a tela
+            text-center: alinha o conteúdo no centro
+            mt-5: margem top: os valores vão de 1 a 5 
+            display: tag para diminuir tamanho da fonte valores 1 até 5-->
+          <div class="col-12 text-center mt-5">
+              <h1 class="display-3">  <i class="fa fa-code text-primary" aria-hidden="true"></i> 7Developers</h1>
+              <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
+          </div>
+      </div>
+
+      <!--mb: aumentando a margin no parte de baixo 5 -->
+      <div class="row mb-5">
+        
+        <div class="col-md-4 col-sm-6 d-none d-sm-block">
+          <!-- Criação de um navbar-->
+              <nav id="navbarVertical" class="navbar navbar-light bg-light">
+                <!-- flex:column: nav bar horinzoltal
+                  navpills: estilo em pílulas-->
+                  <nav class="nav nav-pills flex-column">
+                     
+                      <!-- Item do navbar-->
+                      <a class="nav-link" href="#item1">Texto NOvo</a>
+
+                      <!-- Cruação de um subitem de navbar-->
+                      <nav class="nav nav-pills flex-column">
+                        
+                          <a class="nav-link ml-3 my-2" href="#item1-1">Lorem Ipzinhuo</a>
+
+                          <a class="nav-link ml-3 my-2" href="#item1-2">Alguma coisa NOva</a>
+
+                      </nav>
+
+                      <a class="nav-link" href="#item2">Dark Won</a>
+                      <a class="nav-link" href="#item3">New Site</a>
+
+                        <nav class="nav nav-pills flex-column">
+                        
+                          <a class="nav-link ml-3 my-2" href="#item3-1">Acabando o Scroll</a>
+
+                          <a class="nav-link ml-3 my-2" href="#item3-2">Fianlizou Scroll</a>
+
+                      </nav>
+
+
+                  </nav>
+              </nav>
+
+        </div>
+
+        <div class="col-md-8 col-sm-6">
+          <!-- div que será utilizada para acompanhar o conteúdo do navbar -->
+            <!-- definimos algumas coisas por padrão que é data-spy scroll data ofsset e criamos uma classe ScrollSpysite e configuramos ela 
+              com position:relative;
+                  overflow: auto;
+                  height: 380px; -->
+            <div data-spy="scroll" data-target="#navbarVertical" data-offset="0" class="scrollSpySite">
+               
+                <h4 id="item1">Texto Novo</h4>
+                <p>"Conteúdo aqui, conteúdo aqui", fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por 'lorem ipsum' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero). </p>
+
+                <h5 id="item1-1">Lore ipzinhuo</h5>
+                <p>examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui", fazendo com que ele tenha uma aparência similar a de um texto legível. </p>
+
+                <h5 id="item1-2">Alguma coisa NOva</h5>
+                <p>examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui", fazendo com que ele tenha uma aparência similar a de um texto legível. </p>
+
+                 <h4 id="item2">Dark Won</h4>
+                <p>"Conteúdo aqui, conteúdo aqui", fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por 'lorem ipsum' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero). .</p>
+
+                 <h4 id="item3">New Site</h4>
+                <p>Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
+
+                <h5 id="item3-1">Acabando o Scroll</h5>
+                <p>examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui", fazendo com que ele tenha uma aparência similar a de um texto legível. </p>
+
+                <h5 id="item3-2">Fianlizou Scroll</h5>
+                <p>Existem muitas variações disponíveis de passagens de Lorem Ipsum, mas a maioria sofreu algum tipo de alteração, seja por inserção de passagens com humor</p>
+
+            </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-sm-center">
+            <div class="col-sm-6 col-md-4">
+            <!-- Criação da div card para os conteúdos-->
+            <!-- card-header: cabeçaho do card.-->
+            <!-- card-img-top: class para colocar uma imagem responsiva dentro do card.-->
+            <!-- card-body: corpo
+                 card-title : Título do card, texto com maior destaque.
+                 card-subtitle : pouco destaque mais não tão desmerecido quanto um conteúdo sem class.
+                 card-footer: Rodapé usado para finalização dos cards
+                 list-group- criação de uma lista de conteúdos
+                 text-muted: deixa o conteúdo cinza.-->
+     
+              <div class="card mb-5">
+                <div class="card-header text-center text-dark">
+                  WorkHard
+                </div>
+                <img src="imgs/item-01.jpg" class="card-img-top">
+                  <div class="card-body">
+                    <h4 class="card-title">Novo conteúdo</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">Conteúdo de aprendizado</h6>
+                    <p class="card-text"> É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação.</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Novos itens e etc</li>
+                    <li class="list-group-item">Conteúdos dinâmicos</li>
+                    <li class="list-group-item">Macacos me mordam</li>
+                  </ul>
+                  <div class="card-body">
+                    <a href="#" class="card-link" data-toggle="modal" data-target="#siteModal">Saiba mais</a>
+                    <a href="#" class="card-link">Visite nossas redes socias</a>
+                  </div>
+                  <div class="card-footer text-muted">
+                    Fim do conteúdo, rodapé card.
+                  </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <div class="card mb-5">
+                <div class="card-header text-center text-dark">
+                 Imagination
+                </div>
+                <img src="imgs/item-02.jpg" class="card-img-top">
+                  <div class="card-body">
+                    <h4 class="card-title">Novo conteúdo</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">Conteúdo de aprendizado</h6>
+                    <p class="card-text"> É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação.</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Novos itens e etc</li>
+                    <li class="list-group-item">Conteúdos dinâmicos</li>
+                    <li class="list-group-item">Macacos me mordam</li>
+                  </ul>
+                  <div class="card-body">
+                    <a href="#" class="card-link">Saiba mais</a>
+                    <a href="#" class="card-link">Visite nossas redes socias</a>
+                  </div>
+                  <div class="card-footer text-muted">
+                    Fim do conteúdo, rodapé card.
+                  </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+              <div class="card mb-5">
+                <div class="card-header text-center text-dark">
+                  DoMore
+                </div>
+                <img src="imgs/item-03.jpg" class="card-img-top">
+                  <div class="card-body">
+                    <h4 class="card-title">Novo conteúdo</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">Conteúdo de aprendizado</h6>
+                    <p class="card-text"> É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação.</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Novos itens e etc</li>
+                    <li class="list-group-item">Conteúdos dinâmicos</li>
+                    <li class="list-group-item">Macacos me mordam</li>
+                  </ul>
+                  <div class="card-body">
+                    <a href="#" class="card-link">Saiba mais</a>
+                    <a href="#" class="card-link">Visite nossas redes socias</a>
+                  </div>
+                  <div class="card-footer text-muted">
+                    Fim do conteúdo, rodapé card.
+                  </div>
+
+              </div>
+            </div>
+      </div>
+
+  </div>
+
+<!--Jumbotron é aquela tag gigante qeu exibe algo bem legal que na maioria dos casos é divido por um navpill
+    então existe todo uma serie de parâmetros para deixarmos aqui de maneira padrão
+    a única diferença é que caso nós queremos que ele fique full screen e sem bordas arredondadas precisamos colocar
+    jumbotron-fluid  -->
+
+  <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div row>
+                <div class="col-12 text-center">
+                       <h1 class="display-4"><i class="fa fa-users text-primary" aria-hidden="true"></i> Equipe</h1>
+                       <p class="lead">Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra </p>
+                       <hr>
+                </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+
+
+              <!-- A configuração do navPill com manipulação de conteúdo é bem simples, você cria uma lista de itens com o padrão nav-pills
+                e mapeia cada item da lista apontando para qual div ele irá exibir. 
+                data-toggle="pill" href="#nav-item-01" além de deixar um por padrão já ativo embora caso não esteja nenhum como ativo
+                o primeiro a ser exibido será a primeira div caso ela esteja com a tag show active na própria classe-->
+
+                <ul class="nav nav-pills justify-content-center mb-4" id="pills-nav" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="nav-pills-01" data-toggle="pill" href="#nav-item-01"> EvertonWalker</a>
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link " id="nav-pills-02" data-toggle="pill" href="#nav-item-02"> Flávio </a>
+                    </li>
+                     <li class="nav-item">
+                      <a class="nav-link " id="nav-pills-03" data-toggle="pill" href="#nav-item-03"> Pedro</a>
+                    </li>
+                </ul>
+
+                <!-- Conteúdos de exibiação da tablist, criar as divs com os ids dos actives que foram mapeados e configurar a classe seguindo o padrão
+                  feito isso a gama de informação e conteúdo que pode ser colocada é aleatória-->
+                <div class="tab-content" id="nav-pills-content">
+                    
+                  <div class="tab-pane fade show active" id="nav-item-01" role="tabpanel">
+                    
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <!-- As dimensões existem 21-9 16-9  e 4-3  e 4-1 de acordo com o tamanh do vídeo -->
+                        <!-- ember são utilizados para manipulações de conteúdos de vídeo-->
+                          <div class="embed-responsive embed-responsive-16by9">
+                              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kWwa-2tlfX4">
+                              </iframe>
+                          </div>
+                      </div>
+
+                      <div class="col-sm-6">
+                        <h4>Vídeo legal sobre uma música legal</h4>
+                        <h5 class="text-muted">É mt massa</h5>
+                        <p>
+                        Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane fade" id="nav-item-02" role="tabpanel">
+                     <h4>Lider gerencial</h4>
+                    <h5 class="text-muted">Gente boa</h5>
+                        <p>
+                        Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia</p>
+
+                  </div>
+
+                  <div class="tab-pane fade" id="nav-item-03" role="tabpanel">
+                     <h4>Programador</h4>
+                    <h5 class="text-muted">God</h5>
+                        <p>
+                        Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia</p>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+        </div>
+  </div>
+
+  <div class="container ">
+    
+    <div class="row">
+      <div class="col-12 text-center my-3">
+          <h1> <i class="fa fa-paper-plane text-primary" aria-hidden="true"></i> Formulário de contato</h1>
+      </div>
+    </div>
+
+    <!--É interessante usar a class justify-content-center quando alguns conteúdos ficam ao lado dependendo da resolução,
+      isso faz que eles fiquem alinhados ao centro quando for o caso.-->
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-10 col-lg-8">
+          
+          <form>
+            <!--form-row: ele diminuir o espaçamento das colunas -->
+            <div class="form-row">
+              <!--form-group classe padrão para indicar que terão informações relacionados ao formulário -->
+              <!--form-control são as classes dos inputs, sejam eles text -->
+              <div class="form-group col-sm-6">
+               <label for="inputNome">Nome</label>
+               <input type="text" name="nome" class="form-control" id="inputNome" placeholder="Nome">
+              </div>  
+              <div class="form-group col-sm-6">
+               <label for="inputSobrenome">Sobrenome</label>
+               <input type="text" name="sobrenome" class="form-control" id="inputSobrenome" placeholder="Sobrenome">
+              </div> 
+            </div>
+            <div class="form-row">
+              <div class="form-group col-sm-12">
+               <label for="inputEndereco">Endereço</label>
+               <input type="text" name="endreco" class="form-control" id="inputEndereco" placeholder="Endereço Completo">
+              </div> 
+            </div>
+
+            <div class="form-row">
+               <div class="form-group col-sm-6">
+               <label for="inputCidade">Cidade</label>
+               <input type="text" name="cidade" class="form-control" id="inputCidade" placeholder="Cidade">
+              </div> 
+
+               <div class="form-group col-sm-4">
+                 <label for="inputEstado">Estado</label>
+                 <select id="inputEstado" class="form-control">
+                   <option selected>Escolha</option>
+                   <option>Bahia</option>
+                   <option>...</option>
+                 </select>
+              </div> 
+
+              <div class="form-group col-sm-2">
+                 <label for="inputCep">Cep</label>
+                 <input type="text" name="cep" id="inputCep" class="form-control" placeholder="Cep">
+              </div> 
+
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-sm-12">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" >Desejo receber novidades por E-mail.
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-sm-12 mb-3 mr-auto ">
+                  <button type="submit" class="btn btn-primary ">Enviar</button>
+
+                  <a tabindex="0" class="btn btn-secondary ml-2" role="button" data-toggle="popover" data-placement="right"
+                  data-trigger="focus" title="Espero que ajude" data-content="Para enviar o formulário é necessário que você preencha todos os dados corretamente
+                  antes de clicar em enviar, faça isso e tente novamente.">Ajuda</a>
+
+              </div>
+            </div>
+          </form>
+      </div>
+    </div>
+    
+
+    <!--Rodapé -->
+    <div class="row">
+        <div class="col-12 mb-3"><hr></div>
+
+        <div class="col-sm-4">
+          <h3>Depoimento</h3>
+          <p>Toda essa equipe é formada por alunos do curso de análise de sistema da unibratec, cujo o único foco é um dia se torna uma startup
+          onde possamos através dela criar tecnologias ondem ajudem e facilitem o trabalho de todos.</p> 
+        </div>
+        <div class="col-sm-4">
+            <h3>Menu</h3>
+            <!-- Lista de botões onde o usuário irá para a parte do site onde clicou-->
+            <div class="list-group text-center">
+              <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Perfil</a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Serviços</a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Depoimentos</a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Contatos</a>
+            </div>
+
+
+
+        </div>
+        <div class="col-sm-4">
+          <h3>Social</h3>
+          <div class="btn-group-vertical btn-block btn-group-lg" role="group">
+            <a href="#" class="btn btn-outline-primary"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a>
+            <a href="#" class="btn btn-outline-info"> <i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
+            <a href="#" class="btn btn-outline-warning"> <i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
+          </div>
+        </div>
+
+        <div class="col-12 mt-5">
+          <blockquote class="blockquote text-center">
+              <p class="mb-0"> O sucesso não é garantido, mas o fracasso é certo se você não estiver emocionalmente envolvido em seu trabalho.</p>
+              <footer class="blockquote-footer">Biz Stone <cite title="Source Title">Fundador do Twitter</cite></footer>
+          </blockquote>
+
+        </div>
+    </div>
+  </div>
+
+
+  <!-- modal -->
+  <!--A estrutura para criação de um modal segue um padrão onde já está ai embaixo 
+    ele é composto por 3 partes: header, body  e footer
+    caso você queira adicionar um efeito de fade você pode adicionar classes tranquilamentes na div pai do modal
+    e criar conteúdos da maneira como você criaria fora dele, com containers rows e quebra de colunas
+    para ativar o modal você utilizar as tags data-toggle="modal" data-target="#siteModal" 
+    e para fechar:  <button type="button" class="close" data-dismiss="modal">
+    caso queira criar um botão fechar é só digitar: &times; -->
+  <div class="modal fade" id="siteModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title"> Você pode ir além.</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                  <span>&times;</span>
+                </button>               
+              </div>
+
+              <div class="modal-body">
+                    Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim.
+                    <div class="container-fluid mt-3">
+                        <div class="row">
+                            <div class="col-6">
+                              <h5>Coluna direita</h5>
+                              <p>
+                              Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras</p>
+                            </div>
+                            <div class="col-6">
+                              <h5>Coluna Direita</h5>
+                              <p>
+                                Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras
+                              </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+              </div>
+
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+              </div>
+          </div>        
+      </div>
+  </div>
+
+</main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+   <!-- caso esse popper n funcione utilize o caminho pela pasta umd dentro de dist. -->
+    <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript">
+       
+        $(function(){
+          $('[data-toggle="popover"]').popover();
+        });
+
+
+    </script>
+  </body>
+</html>
